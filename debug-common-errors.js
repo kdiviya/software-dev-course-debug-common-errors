@@ -24,9 +24,10 @@ Think about which debugging methods you found most useful and how you might appl
 // Description:
 // This program is intended to display a simple prompt in the console but fails to run.
 
-console.log("Welcome to the bootcamp
+console.log("Welcome to the bootcamp")
 
 // What’s Wrong?
+//It is syntax error. Double quotes and closing parentheses is missing
 
 
 // Program B
@@ -40,7 +41,7 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 // What’s Wrong?
-
+//It is a runtime error. This code attempts to mulitply the string "eight" into a number which leads to an NaN result .
 
 
 // Program C (Logic Error)
@@ -51,12 +52,13 @@ function isPrime(num) {
   if (num < 2) return false;
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
-      return true;  // Supposed to indicate num is NOT prime
+      return false;  // Supposed to indicate num is NOT prime
     }
   }
-  return false; // Supposed to indicate num IS prime
+  return true; // Supposed to indicate num IS prime
 }
 
 console.log(isPrime(7)); // Expected true but gets false
 
 // What’s Wrong?
+// This code returns false for the number "7" which is a prime number. It needs to return true which the states that number 7 is a prime number.
